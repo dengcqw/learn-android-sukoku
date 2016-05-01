@@ -78,5 +78,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void startGame(int i) {
         Log.d(TAG, "clicked on " + i);
         // Start game here...
+        Intent intent = new Intent(this, Game.class);
+        intent.putExtra(Game.KEY_DIFFICULTY, i);
+        startActivity(intent);
     }
 }
