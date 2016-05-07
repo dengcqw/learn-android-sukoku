@@ -94,5 +94,26 @@ public class PuzzleView extends View {
         }
         // Draw the hints
         // Draw the selection
+        Paint selected = new Paint();
+        selected.setColor(getResources().getColor(R.color.puzzle_selected));
+        canvas.drawRect(selRect, selected);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() != MotionEvent.ACTION_DOWN)
+            return super.onTouchEvent(event);
+
+        select((int)(event.getX()/width), (int)(event.getY()/height));
+//        game.showKeypadOrError(selX, selY);
+        return true;
+    }
+
+    private void select(int x, int y) {
+        invalidate(selRect);
+        selX = Math.min(Math.max(x,0), 8);
+        selY = Math.min(Math.max(y,0),8);
+        getRect(selX, selY, selRect);
+        invalidate(selRect);
     }
 }
