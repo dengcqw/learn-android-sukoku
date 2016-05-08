@@ -7,10 +7,14 @@
  ! We make no guarantees that this code is fit for any purpose. 
  ! Visit http://www.pragmaticprogrammer.com/titles/eband3 for more book information.
 -->
-<resources>
-   <array name="difficulty">
-      <item>@string/easy_label</item>
-      <item>@string/medium_label</item>
-      <item>@string/hard_label</item>
-   </array>
-</resources>
+<ScrollView
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:padding="10dip">
+   <TextView
+      android:id="@+id/about_content"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/about_text" />
+</ScrollView>

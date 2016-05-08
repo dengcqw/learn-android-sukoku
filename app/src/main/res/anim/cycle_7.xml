@@ -7,8 +7,6 @@
  ! We make no guarantees that this code is fit for any purpose. 
  ! Visit http://www.pragmaticprogrammer.com/titles/eband3 for more book information.
 -->
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-   <item android:id="@+id/settings"
-      android:title="@string/settings_label"
-      android:alphabeticShortcut="@string/settings_shortcut" />
-</menu>
+<cycleInterpolator
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:cycles="7" />
